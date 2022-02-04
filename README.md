@@ -53,6 +53,7 @@ Lengthy words or words with complicated spelling will be generated. Every time t
 1. I need to research how to do the submit the words by pressing enter, instead of moving on to the next word once the word typed is matched.
 2. Having enough words in each arrays if I am going to implement the no-repetition of words.
 3. I'm not sure yet how to go about having the timer run only after the first key is pressed.
+4. I don't know how to add sounds yet.
 
 
 ## PROJECT TIMELINE

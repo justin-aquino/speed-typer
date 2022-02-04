@@ -1,0 +1,26 @@
+.raceFlag {
+    background-color: white;
+    width: 50px;
+    margin: 1%;
+    padding: 8px;
+    border-radius: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.subContainer {
+    text-align: center;
+    margin: 0 auto;
+    margin: 5%;
+    padding: 5%;
+    /* width: 70%; */
+    background-color: darkgray;
+}
+
+.score-timer {
+    display: inline;
+
+}

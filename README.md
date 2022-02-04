@@ -7,15 +7,15 @@ For my first project in this course, I decided to build my version of a speed ty
 > I plan on using HTML, CSS, Bootstrap/Other CSS Frameworks, and Javascript
 
 ## TECHNICAL OVERVIEW
-I will be implementing three levels of difficulty. All difficulties will have the same design and interface. The words to be typed will be displayed one by one. Once the user types the word correctly, a new word will be generated, and the score will be incremented by one. I will also implement a timer that will be incremented depending on the difficulty chosen by the player.
+The words to be typed will be displayed one by one. Once the user types the word correctly, a new word will be generated, and the score will be incremented by one. I will also implement a count down timer that will be incremented whenever the player types in the word correctly.
 
 ## Levels of Difficulty Explained:
-I will be making **different arrays** for different levels of difficulty.
+I will be making **different arrays** for different levels of difficulty. MVP will only have Normal difficulty as default. Once the MVP goal has been reached, I will be adding more levels into the game. 
 
 #### EASY MODE
 Short, easy-to-type words will be generated. Every time the player types in the word correctly, the score will increment, and another five seconds will be added to the running timer. Timer starts when player presses the first key.
 
-#### NORMAL MODE
+#### NORMAL MODE(DEFAULT)
 Medium-length, easy to type words / phrases will be generated. Every time the player types in the word correctly, the score will increment, and another 3 seconds will be added to the running timer. Timer starts when player presses the first key.
 
 #### HARD MODE
@@ -31,7 +31,7 @@ Lengthy words or words with complicated spelling will be generated. Every time t
 ## MVP
 
 1. Presentable and responsive design
-2. 3 Levels of Difficulty
+2. 1 Level of Difficulty (NORMAL)
 3. Randomly generate words and display using DOM Manipulation.
 4. Increment Score and Timer when words match.
 5. No word repetitions.
@@ -43,9 +43,10 @@ Lengthy words or words with complicated spelling will be generated. Every time t
 
 1. Only submit words typed by pressing enter.
 2. If the word you submitted by pressing enter is spelled incorrectly, decrement timer.
-3. Add different modes. Generate words according to theme. I.e anime theme, coding syntax.
-4. Add different languages.
-5. Add sounds everytime a key is pressed to simulate mechanical keyboard sounds.
+3. Add Easy mode and Hard Mode.
+4. Add different modes. Generate words according to theme. I.e anime theme, coding syntax.
+5. Add different languages.
+6. Add sounds everytime a key is pressed to simulate mechanical keyboard sounds.
 
 
 ## Possible Roadblocks
@@ -58,7 +59,7 @@ Lengthy words or words with complicated spelling will be generated. Every time t
 
 ## PROJECT TIMELINE
 #### This is only a guide. For accountability. 
-2/4/22 - Barebones Finished. HTML, CSS
+2/4/22 - Barebones Finished. HTML, CSS, Bootstrap
 2/7/22 - First commit. Functions first half finished.
 2/8/22 - Functions, second half. DOM Manipulation and display.**50% Finished**.
 2/9/22 - MVP Finished and bug-free. Start working on Stretch goals one by one.

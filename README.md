@@ -56,7 +56,7 @@ Lengthy words or words with complicated spelling will be generated. Every time t
 
 
 ## PROJECT TIMELINE
-> This is only a guide. For accountability. <
+#### This is only a guide. For accountability. 
 2/4/22 - Barebones Finished. HTML, CSS
 2/7/22 - First commit. Functions first half finished.
 2/8/22 - Functions, second half. DOM Manipulation and display.**50% Finished**.

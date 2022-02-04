@@ -1,6 +1,6 @@
 # SEI-0124 Project 1: Speed-typer: Keylometers/Second
 ## IDEA
-For my first project in this course, I decided to build my version of a speed typing challenge. As a novice mechanical keyboard enthusiast, I enjoy building keyboards using different switches depending on what sound profile and feel I am looking for at certain times. And to test out the build, I always use websites like [monkeytype](https:www.monkeytype.com) and [kbsim](https://kbs.im).
+For my first project in this course, I decided to build my version of a speed typing challenge. As a novice mechanical keyboard enthusiast, I enjoy building keyboards using different switches depending on what sound profile and feel I am looking for at certain times. And to test out the build, I always use websites like [monkeytype](https://www.monkeytype.com/) and [kbsim](https://kbs.im/).
 
 
 ## TECH STACK TO BE USED:

@@ -30,7 +30,7 @@ Lengthy words or words with complicated spelling will be generated. Every time t
 
 ## MVP
 
-1. Presentable design
+1. Presentable and responsive design
 2. 3 Levels of Difficulty
 3. Randomly generate words and display using DOM Manipulation.
 4. Increment Score and Timer when words match.

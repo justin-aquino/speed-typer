@@ -1,21 +1,50 @@
+
+    /* margin: 0 auto; */
+
+
+body {
+    background: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fracing-horizontal-backdrop-vector-illustration-eps-65851961.jpg&f=1&nofb=1);
+    /* background-repeat: initial; */
+}
+
+
+
+header {
+    font-size: 4rem;
+    text-align: center;
+    background-color: darkgray;
+}
+
 .raceFlag {
     background-color: white;
-    width: 50px;
+    width: 70px;
     margin: 1%;
-    padding: 8px;
+    padding: 2px;
     border-radius: 100%;
 }
 
+.instructions {
+    margin: 2%;
+}
+
 .container {
+    background-color: black;
     margin: 0 auto;
+    padding: 5%;
+    margin-top: 5%;
+    /* margin: 5%; */
+    border-radius: 20px;
     text-align: center;
+    /* display: flex;
+    flex-wrap: wrap; */
 }
 
 .subContainer {
+
     text-align: center;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     margin: 5%;
-    padding: 5%;
+    /* padding: 5%; */
     /* width: 70%; */
     background-color: darkgray;
 }
@@ -23,4 +52,8 @@
 .score-timer {
     display: inline;
 
+}
+
+.randomWords {
+    font-size: 3rem;
 }

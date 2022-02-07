@@ -18,6 +18,7 @@ header {
 .raceFlag {
     background-color: white;
     width: 70px;
+    height: 70px;
     margin: 1%;
     padding: 2px;
     border-radius: 100%;
@@ -51,9 +52,25 @@ header {
 
 .score-timer {
     display: inline;
+    /* padding-right: 29%; */
+    /* justify-content: space-around; */
 
 }
 
 .randomWords {
     font-size: 3rem;
+}
+
+.inputEl {
+    font-size: 30px;
+    border-radius: 25px;
+    margin: 5%;
+    width: 70%;
+    padding: 2%;
+}
+
+#newGameBtn {
+    width: 10rem;
+    font-size: 1em;
+    padding: 1%;
 }

@@ -2,6 +2,7 @@
 const randomWordsDisplay = document.querySelector(".randomWords")
 const gameOverCover = document.querySelector("#gameOver")
 const startBtn = document.querySelector("#startBtn")
+const container = document.querySelector(".container")
 let gameOverScore = document.querySelector("#gameOverScore")
 let playerInput = document.querySelector("#playerInput")
 let timerDisplay = document.querySelector("#timer")
@@ -103,6 +104,7 @@ function countDown() {
     if(timer === 0) {
         clearInterval(timeInterval)
         gameOverCover.style.display = "block"
+        container.style.display = "none"
         gameOverScore.innerText = `Your score is: ${score}`
 
     }
@@ -144,6 +146,7 @@ playerInput.addEventListener("input", compareWords)
 
 newGameBtn.addEventListener("click", () => {
     // window.location.reload()
+    container.style.display = "block"
     countDown()
     // wordsRandomizer()
     // compareWords()

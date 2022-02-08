@@ -67,6 +67,7 @@ nav{
     border-radius: 20px;
     width: 70%;
     text-align: center;
+    display: "block"
     /* min-height: 100vh; */
 }
 
@@ -114,7 +115,7 @@ nav{
     flex-direction: column;
     border-radius: 10px;
     /* opacity: 0.5; */
-    display: none;
+    display: block;
 }
 
 .innerGameOver{
@@ -125,6 +126,7 @@ nav{
     padding: 10%;
     width: 70%;
     border-radius: 10px;
+    text-align: center;
     /* align-content: center; */
 }
 
@@ -156,5 +158,8 @@ nav{
         left: 9rem;
         height: 60%;
         width: 75%;
+    }
+    #innerGameOver {
+        padding-top: 25%;
     }
   }

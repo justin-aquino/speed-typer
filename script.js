@@ -1,6 +1,7 @@
 // alert("hello")
 const randomWordsDisplay = document.querySelector(".randomWords")
 const gameOverCover = document.querySelector("#gameOver")
+const startBtn = document.querySelector("#startBtn")
 let gameOverScore = document.querySelector("#gameOverScore")
 let playerInput = document.querySelector("#playerInput")
 let timerDisplay = document.querySelector("#timer")
@@ -9,8 +10,9 @@ let score = 0;
 let timer = 10
 timerDisplay.innerText = timer
 const newGameBtn = document.querySelector("#newGameBtn")
-// let timeInterval;
-let timeInterval = setInterval(countDown, 1000)
+let timeInterval;
+
+// let timeInterval = setInterval(countDown, 1000)
 // let randomWord;
 
 const words = [
@@ -84,10 +86,14 @@ const words = [
 ]
 
 // const countDown = () => {
-//     timer--
-// }
-
-// document.addEventListener("keydown", countDown)
+    //     timer--
+    // }
+    
+        startBtn.addEventListener("click", () => {
+        timeInterval = setInterval(countDown, 1000)
+        wordsRandomizer()
+        playerInput.focus()
+})
 
 function countDown() {
     // timeInterval = setInterval(countDown, 1000)
@@ -109,7 +115,6 @@ const wordsRandomizer = () => {
     }
 }
 
-wordsRandomizer()
 
 
 
@@ -120,30 +125,36 @@ const compareWords = (e) => {
     
     if(text === randomWordsDisplay.innerText){
         // console.log("yaas")
+        // text.style.color = "blue"
         wordsRandomizer()
         score++
         scoreDisplay.innerText = score
         timer += 2
         playerInput.value = ""    
         console.log(score)
+
+        // if(text !== randomWordsDisplay.innerText){
+        //     text.style.color = "red"
+        // }
     }
 }
 playerInput.addEventListener("input", compareWords)
 
 
-playerInput.focus()
 
 newGameBtn.addEventListener("click", () => {
     // window.location.reload()
     countDown()
-    wordsRandomizer()
+    // wordsRandomizer()
     // compareWords()
+    // startBtn
+    randomWordsDisplay.innerText = ""
     score = 0
     timer = 10
     timerDisplay.innerText = timer
-    timeInterval = setInterval(countDown, 1000) /* I needed to put a value in the timeInterval variable
-    again because when the timer ran out, clearInterval happened. Therefore the timerInterval variable had no more value. That's why the timer does not decrement.
-     */
+    // timeInterval = setInterval(countDown, 1000) // I needed to put a value in the timeInterval variable
+    // again because when the timer ran out, clearInterval happened. Therefore the timerInterval variable had no more value. That's why the timer does not decrement.
+  
     scoreDisplay.innerText = score
     // timeInterval = setInterval(countDown, 1000)
     playerInput.value = ""

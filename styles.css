@@ -129,7 +129,7 @@ nav{
 }
 
 
-#newGameBtn {
+.gameBtn {
     width: 10rem;
     font-size: 25px;
     padding: 1%;

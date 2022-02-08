@@ -1,24 +1,48 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
 
-    /* margin: 0 auto; */
 
+
+* {
+    box-sizing: border-box;
+    /* font-family: 'Yanone Kaffeesatz', sans-serif; */
+    color: var(--primary-fontColor);
+    font-family: 'Exo', sans-serif;
+
+}
+
+:root {
+    --darkgray: #404040;
+    --lightgray: gray;
+    --primary-fontColor: cornsilk;
+}
 
 body {
     background: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fracing-horizontal-backdrop-vector-illustration-eps-65851961.jpg&f=1&nofb=1);
-    /* background-repeat: initial; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 
 
-header {
-    font-size: 4rem;
+h1 {
+   font-size: 50px;
     text-align: center;
-    background-color: darkgray;
+    background-color: var(--darkgray);
+    border-radius: 10px;
+    padding: 2%;
+}
+nav{
+    width: 100%;
+    justify-content: center;
 }
 
 .raceFlag {
     background-color: white;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     margin: 1%;
     padding: 2px;
     border-radius: 100%;
@@ -26,38 +50,43 @@ header {
 
 .instructions {
     margin: 2%;
+    width: 100%;
 }
 
 .container {
-    background-color: black;
+    background-color: var(--lightgray) ;
     margin: 0 auto;
     padding: 5%;
-    margin-top: 5%;
+    /* margin-top: 2%; */
+    margin-bottom: 2%;
     /* margin: 5%; */
     border-radius: 20px;
+    width: 70%;
     text-align: center;
-    /* display: flex;
-    flex-wrap: wrap; */
+    /* min-height: 100vh; */
 }
 
 .subContainer {
 
     text-align: center;
     /* margin: 0 auto; */
-    margin: 5%;
+    margin: 2%;
     /* padding: 5%; */
     /* width: 70%; */
-    background-color: darkgray;
+    background-color: #404040;
+    border-radius: 10px;
 }
 
 .score-timer {
-    display: inline;
-    /* padding-right: 29%; */
-    /* justify-content: space-around; */
+    font-size: 25px;
+    display: flex;
+    justify-content: space-around;
+    margin: 1%;
 
 }
 
 .randomWords {
+    /* margin: 5%; */
     font-size: 3rem;
 }
 
@@ -67,10 +96,40 @@ header {
     margin: 5%;
     width: 70%;
     padding: 2%;
+    color: #404040;
 }
+#gameOver {
+    font-size: 30px;
+    background-color: var(--darkgray);
+    top: 20rem;
+    position: absolute;
+    height: 55%;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    /* opacity: 0.5; */
+    display: none;
+}
+
+.innerGameOver{
+    background-color: var(--lightgray);
+    margin: 0 auto;
+    margin-top: 9%;
+    min-height: 50%;
+    padding: 5%;
+    width: 70%;
+    border-radius: 10px;
+    /* align-content: center; */
+}
+
 
 #newGameBtn {
     width: 10rem;
-    font-size: 1em;
+    font-size: 25px;
     padding: 1%;
+    cursor: pointer;
+    border-radius: 10px;
+    color: var(--darkgray);
 }

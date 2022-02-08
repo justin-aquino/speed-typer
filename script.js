@@ -1,5 +1,7 @@
 // alert("hello")
 const randomWordsDisplay = document.querySelector(".randomWords")
+const gameOverCover = document.querySelector("#gameOver")
+let gameOverScore = document.querySelector("#gameOverScore")
 let playerInput = document.querySelector("#playerInput")
 let timerDisplay = document.querySelector("#timer")
 let scoreDisplay = document.querySelector("#score")
@@ -51,6 +53,32 @@ const words = [
     "mischief managed",
     "Master has given Dobby a sock. Dobby is free!",
     "I am Prometheus! And you are just a god!",
+    "silhouette",
+    "Hepaticocholangiogastrostomy",
+    "Condescend",
+    "vengeance",
+    "saccharine",
+    "floccinaucinihilipilification",
+    "expunge",
+    "abysmal",
+    "bouillon",
+    "andragogy",
+    "onomatopoeia",
+    "soliloquy",
+    "pneumonia",
+    "liaison",
+    "laissez faire",
+    "ganache",
+    "for(x = 0; x < array.length; x++)",
+    // "",
+    // "",
+    // "",
+    // "",
+    // "",
+    // "",
+    // "",
+    // "",
+    // "",
 
 ]
 
@@ -64,6 +92,9 @@ function countDown() {
 
     if(timer === 0) {
         clearInterval(timeInterval)
+        gameOverCover.style.display = "block"
+        gameOverScore.innerText = `Your score is: ${score}`
+
     }
 }
 
@@ -80,7 +111,7 @@ wordsRandomizer()
 
 
 const compareWords = (e) => {
-    let text = e.target.value
+    let text = e.target.value.trim()
     // console.log(text)
     
     if(text === randomWordsDisplay.innerText){
@@ -88,14 +119,32 @@ const compareWords = (e) => {
         wordsRandomizer()
         score++
         scoreDisplay.innerText = score
-        playerInput.value = ""
-        
+        timer += 2
+        playerInput.value = ""    
         console.log(score)
     }
 }
 playerInput.addEventListener("input", compareWords)
 
 playerInput.focus()
+
+newGameBtn.addEventListener("click", () => {
+    // window.location.reload()
+    countDown()
+    wordsRandomizer()
+    // compareWords()
+    score = 0
+    timer = 10
+    timerDisplay.innerText = timer
+    timeInterval = setInterval(countDown, 1000) /* I needed to put a value in the timeInterval variable
+    again because when the timer ran out, clearInterval happened. Therefore the timerInterval variable had no more value. That's why the timer does not decrement.
+     */
+    scoreDisplay.innerText = score
+    // timeInterval = setInterval(countDown, 1000)
+    playerInput.value = ""
+    gameOverCover.style.display = "none";
+    playerInput.focus()
+})
 // const gamePlay = () => {
 
 // }

@@ -132,6 +132,7 @@ nav{
 .gameBtn {
     width: 10rem;
     font-size: 25px;
+    margin: 2%;
     padding: 1%;
     cursor: pointer;
     border-radius: 10px;

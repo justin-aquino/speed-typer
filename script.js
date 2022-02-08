@@ -9,6 +9,7 @@ let score = 0;
 let timer = 10
 timerDisplay.innerText = timer
 const newGameBtn = document.querySelector("#newGameBtn")
+// let timeInterval;
 let timeInterval = setInterval(countDown, 1000)
 // let randomWord;
 
@@ -86,7 +87,10 @@ const words = [
 //     timer--
 // }
 
+// document.addEventListener("keydown", countDown)
+
 function countDown() {
+    // timeInterval = setInterval(countDown, 1000)
     timer--
     timerDisplay.innerText = timer
 
@@ -125,6 +129,7 @@ const compareWords = (e) => {
     }
 }
 playerInput.addEventListener("input", compareWords)
+
 
 playerInput.focus()
 

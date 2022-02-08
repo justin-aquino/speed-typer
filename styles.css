@@ -51,6 +51,10 @@ nav{
 .instructions {
     margin: 2%;
     width: 100%;
+    /* color: var(--darkgray); */
+}
+.instructionsP {
+    color: var(--darkgray)
 }
 
 .container {
@@ -101,9 +105,9 @@ nav{
 #gameOver {
     font-size: 30px;
     background-color: var(--darkgray);
-    top: 20rem;
+    top: 19rem;
     position: absolute;
-    height: 55%;
+    height: 60%;
     width: 60%;
     align-items: center;
     justify-content: center;
@@ -117,8 +121,8 @@ nav{
     background-color: var(--lightgray);
     margin: 0 auto;
     margin-top: 9%;
-    min-height: 50%;
-    padding: 5%;
+    min-height: 70%;
+    padding: 10%;
     width: 70%;
     border-radius: 10px;
     /* align-content: center; */
@@ -133,3 +137,23 @@ nav{
     border-radius: 10px;
     color: var(--darkgray);
 }
+@media only screen and (max-width: 1500px) {
+    h1 {
+      font-size: 20px;
+    }
+
+    .subContainer {
+        height: 50%;
+    }
+
+    /* .innerGameOver {
+        height: 5rem;
+    } */
+
+    #gameOver{
+        top: 10rem;
+        left: 9rem;
+        height: 60%;
+        width: 75%;
+    }
+  }

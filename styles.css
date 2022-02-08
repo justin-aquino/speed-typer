@@ -115,7 +115,7 @@ nav{
     flex-direction: column;
     border-radius: 10px;
     /* opacity: 0.5; */
-    display: block;
+    display: none;
 }
 
 .innerGameOver{
@@ -145,6 +145,10 @@ nav{
       font-size: 20px;
     }
 
+    .randomWords {
+        font-size: 35px;
+    }
+
     .subContainer {
         height: 50%;
     }
@@ -159,7 +163,12 @@ nav{
         height: 60%;
         width: 75%;
     }
-    #innerGameOver {
+    /* #innerGameOver {
+        text-align: center;
         padding-top: 25%;
+    } */
+    .inputEl {
+        padding: 2%;
+        font-size: 15px;
     }
   }

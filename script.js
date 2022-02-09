@@ -12,6 +12,15 @@ let timer = 10
 timerDisplay.innerText = timer
 const newGameBtn = document.querySelector("#newGameBtn")
 let timeInterval;
+const gameAudio = new Audio()
+gameAudio.src = "./audio/game.mp3"
+const scoreAudio = new Audio()
+scoreAudio.src = "./audio/score.mp3"
+const timerAudio = new Audio()
+timerAudio.src = "./audio/clock.mp3"
+const gameOverAudio = new Audio()
+gameOverAudio.src = "./audio/tires.mp3"
+
 
 // let timeInterval = setInterval(countDown, 1000)
 // let randomWord;
@@ -89,11 +98,14 @@ const words = [
 // const countDown = () => {
     //     timer--
     // }
-    
-        startBtn.addEventListener("click", () => {
-        timeInterval = setInterval(countDown, 1000)
-        wordsRandomizer()
-        playerInput.focus()
+// gameAudio.play()
+
+
+startBtn.addEventListener("click", () => {
+    timeInterval = setInterval(countDown, 1000)
+    gameAudio.pause()
+    wordsRandomizer()
+    playerInput.focus()
 })
 
 function countDown() {
@@ -101,12 +113,19 @@ function countDown() {
     timer--
     timerDisplay.innerText = timer
 
+    if(timer < 5){
+        timerAudio.play()
+    } else {
+        timerAudio.pause()
+    }
+
     if(timer === 0) {
         clearInterval(timeInterval)
+        gameOverAudio.play()
+        timerAudio.pause()
         gameOverCover.style.display = "block"
         container.style.display = "none"
         gameOverScore.innerText = `Your score is: ${score}`
-
     }
 }
 
@@ -129,9 +148,10 @@ const compareWords = (e) => {
         // console.log("yaas")
         // text.style.color = "blue"
         wordsRandomizer()
-        score++
+        // score++
+        updateScore()
         scoreDisplay.innerText = score
-        timer += 2
+        timer += 3
         playerInput.value = ""    
         console.log(score)
 
@@ -140,6 +160,12 @@ const compareWords = (e) => {
         // }
     }
 }
+
+const updateScore = () => {
+    score++
+    scoreAudio.play()
+}
+
 playerInput.addEventListener("input", compareWords)
 
 
@@ -147,10 +173,8 @@ playerInput.addEventListener("input", compareWords)
 newGameBtn.addEventListener("click", () => {
     // window.location.reload()
     container.style.display = "block"
-    countDown()
-    // wordsRandomizer()
-    // compareWords()
-    // startBtn
+    // countDown()
+    gameAudio.play()
     randomWordsDisplay.innerText = ""
     score = 0
     timer = 10

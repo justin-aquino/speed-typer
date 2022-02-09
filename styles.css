@@ -28,7 +28,7 @@ body {
 
 
 h1 {
-   font-size: 50px;
+   font-size: 20px;
     text-align: center;
     background-color: var(--darkgray);
     border-radius: 10px;
@@ -83,7 +83,7 @@ nav{
 }
 
 .score-timer {
-    font-size: 25px;
+    font-size: 15px;
     display: flex;
     justify-content: space-around;
     margin: 1%;
@@ -92,11 +92,11 @@ nav{
 
 .randomWords {
     /* margin: 5%; */
-    font-size: 3rem;
+    font-size: 25px;
 }
 
 .inputEl {
-    font-size: 30px;
+    font-size: 15px;
     border-radius: 25px;
     margin: 5%;
     width: 70%;
@@ -104,11 +104,11 @@ nav{
     color: #404040;
 }
 #gameOver {
-    font-size: 30px;
+    font-size: 25px;
     background-color: var(--darkgray);
     top: 19rem;
     position: absolute;
-    height: 60%;
+    height: 50%;
     width: 60%;
     align-items: center;
     justify-content: center;
@@ -121,45 +121,71 @@ nav{
 .innerGameOver{
     background-color: var(--lightgray);
     margin: 0 auto;
-    margin-top: 9%;
-    min-height: 70%;
+    margin-top: 15%;
+    min-height: 50%;
     padding: 10%;
     width: 70%;
     border-radius: 10px;
     text-align: center;
+    
     /* align-content: center; */
 }
 
 
 .gameBtn {
-    width: 10rem;
-    font-size: 25px;
+    width: 7em;
+    font-size: 15px;
     margin: 2%;
-    padding: 1%;
+    /* padding: 3%; */
     cursor: pointer;
     border-radius: 10px;
     color: var(--darkgray);
 }
-@media only screen and (max-width: 1500px) {
+
+
+@media only screen and (min-width: 1000px){
+    .randomWords {
+        font-size: 35px;
+    }
+    .innerGameOver {
+        margin-top: 10%;
+    }
+    .gameBtn {
+        width: 8rem;
+        font-size: 20px;
+        /* margin: 1%; */
+        /* padding: 3%; */
+    }
+    .score-timer {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
     h1 {
-      font-size: 20px;
+      font-size: 50px;
+    }
+    .score-timer {
+        font-size: 25px;
     }
 
     .randomWords {
-        font-size: 35px;
+        font-size: 50px;
     }
 
     .subContainer {
         height: 50%;
     }
 
-    /* .innerGameOver {
-        height: 5rem;
-    } */
+    .innerGameOver {
+        margin-top: 3%;
+        /* height: rem; */
+    }
 
     #gameOver{
-        top: 10rem;
-        left: 9rem;
+        top: 15rem;
+        left: 15rem;
         height: 60%;
         width: 75%;
     }
@@ -171,4 +197,10 @@ nav{
         padding: 2%;
         font-size: 15px;
     }
+    .gameBtn {
+        width: 10rem;
+        font-size: 20px;
+        padding: 1%;
+    }
+    
   }

@@ -98,7 +98,7 @@ const words = [
 // const countDown = () => {
     //     timer--
     // }
-// gameAudio.play()
+gameAudio.play()
 
 
 startBtn.addEventListener("click", () => {

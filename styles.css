@@ -12,7 +12,7 @@
 }
 
 :root {
-    --darkgray: #404040;
+    --darkgray: rgb(33,37,41);
     --lightgray: gray;
     --primary-fontColor: cornsilk;
 }
@@ -37,6 +37,11 @@ h1 {
 nav{
     width: 100%;
     justify-content: center;
+    margin-bottom: 2%;
+}
+
+ol, li {
+    text-align: center;
 }
 
 .raceFlag {
@@ -48,22 +53,37 @@ nav{
     border-radius: 100%;
 }
 
+.volumeIcon {
+    margin: 1%;
+}
+
+
 .instructions {
-    margin: 2%;
-    width: 100%;
+    margin: 1%;
+    width: 50%;
+    text-align: center;
+    
     /* color: var(--darkgray); */
 }
-.instructionsP {
-    color: var(--darkgray)
+
+.instructionsList, .instructionToggle {
+    width: 40%;
+    margin: 0 auto;
+    text-align: left;
+}
+.instructionToggle {
+    /* color: var(--darkgray); */
+    font-size: 15px;
+    /* background-color: var(--lightgray); */
 }
 
 .container {
     background-color: var(--lightgray) ;
     margin: 0 auto;
-    padding: 5%;
-    /* margin-top: 2%; */
-    margin-bottom: 2%;
-    margin: 5%;
+    padding: 2%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    margin: 1%;
     border-radius: 20px;
     width: 70%;
     text-align: center;
@@ -75,10 +95,17 @@ nav{
 
     text-align: center;
     /* margin: 0 auto; */
-    margin: 2%;
+    margin: 1%;
     /* padding: 5%; */
     /* width: 70%; */
-    background-color: #404040;
+    background-color: var(--darkgray);
+    border-radius: 10px;
+}
+.diffContainer {
+    background-color: var(--darkgray);
+    width: 17%;
+    margin-bottom: 1%;
+    padding: 1%;
     border-radius: 10px;
 }
 
@@ -105,7 +132,7 @@ nav{
 }
 #gameOver {
     font-size: 25px;
-    background-color: var(--darkgray);
+    background-color: var(--lightgray);
     top: 19rem;
     position: absolute;
     height: 50%;
@@ -119,7 +146,7 @@ nav{
 }
 
 .innerGameOver{
-    background-color: var(--lightgray);
+    background-color: var(--darkgray);
     margin: 0 auto;
     margin-top: 15%;
     min-height: 50%;
@@ -139,11 +166,20 @@ nav{
     /* padding: 3%; */
     cursor: pointer;
     border-radius: 10px;
-    color: var(--darkgray);
+    color: var(--primary-fontColor);
+    background-color: var(--lightgray);
+}
+
+#restartBtn {
+    /* display: none; */
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 5%;
 }
 
 #difficulty {
     text-align: left;
+    font-size: 12px;
 }
 
 
@@ -177,6 +213,10 @@ nav{
     .randomWords {
         font-size: 50px;
     }
+    .container {
+        margin-top: 0;
+        max-height: 80vh;
+    }
 
     .subContainer {
         height: 50%;
@@ -199,7 +239,7 @@ nav{
     } */
     .inputEl {
         padding: 2%;
-        font-size: 15px;
+        font-size: 25px;
     }
     .gameBtn {
         width: 10rem;

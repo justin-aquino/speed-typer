@@ -5,7 +5,8 @@ const startBtn = document.querySelector("#startBtn")
 const container = document.querySelector(".container")
 const difficultyDisplay = document.querySelector("#difficulty")
 const diffSelection = Array.from(document.querySelectorAll(".diffLvl"))
-let difficulty = "normal"
+const restartBtn = document.querySelector("#restartBtn")
+let difficulty = "NORMAL"
 // let difficulty = localStorage.getItem("difficulty") !== null ? localStorage.getItem("difficulty") : "Normal";
 // difficulty.style.color = "red"
 difficultyDisplay.innerText = `Difficulty Level: ${difficulty}`
@@ -111,6 +112,7 @@ const words = [
 diffSelection.forEach((sel) => {
     sel.addEventListener("click", () => {
         difficulty = sel.innerText.toUpperCase()
+        difficultyDisplay.innerText = `Difficulty: ${difficulty}`
         // console.log(sel.innerText)
         console.log(difficulty)
     })
@@ -118,24 +120,18 @@ diffSelection.forEach((sel) => {
 
 console.log(difficulty)
 
-startBtn.addEventListener("click", () => {
-    timeInterval = setInterval(countDown, 1000)
-    gameAudio.pause()
-    wordsRandomizer()
-    playerInput.focus()
-})
 
 function countDown() {
     // timeInterval = setInterval(countDown, 1000)
     timer--
     timerDisplay.innerText = timer
-
+    
     if(timer < 5){
         timerAudio.play()
     } else {
         timerAudio.pause()
     }
-
+    
     if(timer === 0) {
         clearInterval(timeInterval)
         gameOverAudio.play()
@@ -159,29 +155,21 @@ const wordsRandomizer = () => {
 
 const compareWords = (e) => {
     let text = e.target.value.trim()
-    // console.log(text)
     
     if(text === randomWordsDisplay.innerText){
-        // console.log("yaas")
-        // text.style.color = "blue"
         wordsRandomizer()
-        // score++
         updateScore()
         scoreDisplay.innerText = score
         playerInput.value = ""    
         console.log(score)
-
-        if(difficulty.toUpperCase() == "Easy".toUpperCase){
+        
+        if(difficulty == "Easy".toUpperCase()){
             timer += 6
         } else if (difficulty.toUpperCase() == "Normal".toUpperCase()){
             timer += 4
         } else {
             timer += 2
         }
-
-        // if(text !== randomWordsDisplay.innerText){
-        //     text.style.color = "red"
-        // }
     }
 }
 
@@ -192,9 +180,15 @@ const updateScore = () => {
 
 playerInput.addEventListener("input", compareWords)
 
+startBtn.addEventListener("click", () => {
+    timeInterval = setInterval(countDown, 1000)
+    gameAudio.pause()
+    wordsRandomizer()
+    playerInput.focus()
+})
 
 
-newGameBtn.addEventListener("click", () => {
+const newGame = () => {
     // window.location.reload()
     container.style.display = "block"
     // countDown()
@@ -205,14 +199,23 @@ newGameBtn.addEventListener("click", () => {
     timerDisplay.innerText = timer
     // timeInterval = setInterval(countDown, 1000) // I needed to put a value in the timeInterval variable
     // again because when the timer ran out, clearInterval happened. Therefore the timerInterval variable had no more value. That's why the timer does not decrement.
-  
+    
     scoreDisplay.innerText = score
     // timeInterval = setInterval(countDown, 1000)
     playerInput.value = ""
     gameOverCover.style.display = "none";
     playerInput.focus()
-})
-// const gamePlay = () => {
+    //   restartBtn.style.display = "none"
+    //   startBtn.style.display = "flex"
+}
 
-// }
-// console.log(input)
+restartBtn.addEventListener("click", () => {
+    window.location.reload()
+})
+
+newGameBtn.addEventListener("click", newGame)
+
+document.addEventListener("DOMContentLoaded", ()=> {
+    
+    gameAudio.play()
+})

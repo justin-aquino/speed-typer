@@ -43,14 +43,22 @@
             </button>
         </p>
         <div class="collapse" id="collapseExample">
-            <div class="card card-body p-2 text-info instructionsP">
-                Type as many of the words generated as you can before the timer runs out! 
+            <div class="card card-body p-2 text-info bg-dark">
+              <ol>
+                <li class="instructionToggle">Type as many words as you can before the timer runs out!</li>
+                <li class="instructionToggle">Words are case sensitive!</li>
+                <li class="instructionToggle">Easy Mode adds 5 seconds per correct word typed.</li>
+                <li class="instructionToggle">Normal Mode adds 3 seconds per correct word typed.</li>
+                <li class="instructionToggle">Hard mode adds 2 seconds per correct word typed.</li>
+              </ol>
             </div>
         </div>
     </div>
 
     <div class="container">
+      <div class="diffContainer">
         <div id="difficulty"></div>
+      </div>
           
         <h1>Keylometer/Minute</h1>
         
@@ -63,6 +71,7 @@
             <div class="randomWords"></div>
             <input type="text" id="playerInput" class="inputEl"> <br>
             <input type="submit" value="Start!" class="gameBtn" id="startBtn">
+            <input type="submit" value="Re-do!" id="restartBtn" class="gameBtn">
           </div>
         </div>
         <div id="gameOver">

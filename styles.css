@@ -19,7 +19,7 @@
 
 body {
     background: url(https://st.depositphotos.com/1032749/5102/i/950/depositphotos_51025589-stock-photo-racing-flags-background-checkered-flag.jpg);
-    background-size: contain;
+    /* background-size: contain; */
     display: flex;
     flex-wrap: wrap;
     align-items: center;

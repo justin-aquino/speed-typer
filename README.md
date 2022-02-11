@@ -4,22 +4,26 @@ For my first project in this course, I decided to build my version of a speed ty
 
 
 ## TECH STACK TO BE USED:
-> I plan on using HTML, CSS, Bootstrap/Other CSS Frameworks, and Javascript
+> I plan on using HTML, CSS, Bootstrap/Other CSS Frameworks, Favicon, and Javascript
 
 ## TECHNICAL OVERVIEW
-The words to be typed will be displayed one by one. Once the user types the word correctly, a new word will be generated, and the score will be incremented by one. I will also implement a count down timer that will be incremented whenever the player types in the word correctly.
+The words to be typed will be displayed one by one. Once the user types the word correctly, a new word will be generated (no need to press enter), and the score will be incremented by one. I will also implement a count down timer that will be incremented whenever the player types in the word correctly.
 
 ## Levels of Difficulty Explained:
-I will be making **different arrays** for different levels of difficulty. MVP will only have Normal difficulty as default. Once the MVP goal has been reached, I will be adding more levels into the game. 
+MVP will only have Normal difficulty as default. Once the MVP goal has been reached, I will be adding more levels into the game. 
+
+### Every word typed correctly will increment the timer by: 
 
 #### EASY MODE
-Short, easy-to-type words will be generated. Every time the player types in the word correctly, the score will increment, and another five seconds will be added to the running timer. Timer starts when player presses the first key.
++ 5 seconds.
 
 #### NORMAL MODE(DEFAULT)
-Medium-length, easy to type words / phrases will be generated. Every time the player types in the word correctly, the score will increment, and another 3 seconds will be added to the running timer. Timer starts when player presses the first key.
++3 Seconds
 
 #### HARD MODE
-Lengthy words or words with complicated spelling will be generated. Every time the player types in the word correctly, the score will increment, and another second will be added to the running timer. The timer starts as soon as the page loads.
++ 2 seconds.
+
+
 
 
 
@@ -34,35 +38,30 @@ Lengthy words or words with complicated spelling will be generated. Every time t
 2. 1 Level of Difficulty (NORMAL)
 3. Randomly generate words and display using DOM Manipulation.
 4. Increment Score and Timer when words match.
-5. No word repetitions.
-6. Reset button that resets the timer and input fields.
-7. Timer countdown starts depending on difficulty.
-8. Game over function.
+5. Reset button that resets the timer and input fields.
+6. Timer increment depending on difficulty.
+7. Game over function.
+8. Start Button
 
-## Stretch Goals
+## Stretch Goals Achieved:
 
-1. Only submit words typed by pressing enter.
-2. If the word you submitted by pressing enter is spelled incorrectly, decrement timer.
-3. Add Easy mode and Hard Mode.
-4. Add different modes. Generate words according to theme. I.e anime theme, coding syntax.
-5. Add different languages.
-6. Add sounds everytime a key is pressed to simulate mechanical keyboard sounds.
-
-
-## Possible Roadblocks
-
-1. I need to research how to do the submit the words by pressing enter, instead of moving on to the next word once the word typed is matched.
-2. Having enough words in each arrays if I am going to implement the no-repetition of words.
-3. I'm not sure yet how to go about having the timer run only after the first key is pressed.
-4. I don't know how to add sounds yet.
+1. Add Easy mode and Hard Mode.
+2. + 5 seconds for easy mode, + 3 for normal mode, + 2 for hard mode.
+3. Add sound effects
+4. Add mute button
+5. Add home page.
+6. Add re-do Button
 
 
-## PROJECT TIMELINE
+### SOURCES
+All images used are from google images.
+All audios used are from ZapSplat.com
+<!-- ## PROJECT TIMELINE
 #### This is only a guide. For accountability. 
 2/4/22 - Barebones Finished. HTML, CSS, Bootstrap
 2/7/22 - First commit. Functions first half finished.
 2/8/22 - Functions, second half. DOM Manipulation and display.**50% Finished**.
 2/9/22 - MVP Finished and bug-free. Start working on Stretch goals one by one.
 2/10/22 - Final debugging. Make script for smoother presentation.
-2/11/22 - D-Day.
+2/11/22 - D-Day. -->
 

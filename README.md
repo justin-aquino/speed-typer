@@ -28,9 +28,12 @@ MVP will only have Normal difficulty as default. Once the MVP goal has been reac
 
 
 
-## WIREFRAME
+## WIREFRAME and SCREEN SHOTS 
 
 ![Game Page Wireframe](wireframe.jpeg)
+![Home-Page](home-page.png)
+![Game-Page](game-page.png)
+
 
 ## MVP
 

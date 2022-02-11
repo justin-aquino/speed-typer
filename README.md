@@ -15,13 +15,13 @@ MVP will only have Normal difficulty as default. Once the MVP goal has been reac
 ### Every word typed correctly will increment the timer by: 
 
 #### EASY MODE
-+ 5 seconds.
++5 seconds.
 
 #### NORMAL MODE(DEFAULT)
 +3 Seconds
 
 #### HARD MODE
-+ 2 seconds.
++2 seconds.
 
 
 
@@ -55,6 +55,11 @@ MVP will only have Normal difficulty as default. Once the MVP goal has been reac
 5. Add home page.
 6. Add re-do Button
 
+
+## Future Plans
+1. Use a word generator API
+2. Database for players and top 10 players with the highest score
+3. Remove duplicates.
 
 ### SOURCES
 All images used are from google images.

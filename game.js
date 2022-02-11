@@ -27,6 +27,8 @@ const timerAudio = new Audio()
 timerAudio.src = "./audio/clock.mp3"
 const gameOverAudio = new Audio()
 gameOverAudio.src = "./audio/tires.mp3"
+const volumeBtn = document.querySelector("#muteIcon")
+let isMute = false
 
 
 // let timeInterval = setInterval(countDown, 1000)
@@ -108,12 +110,14 @@ const words = [
     
 ]
 // window.addEventListener("load", () => {
-    gameAudio.play()
+    // gameAudio.play()
 // })
 
 // const countDown = () => {
     //     timer--
     // }
+
+
 
 diffSelection.forEach((sel) => {
     sel.addEventListener("click", () => {
@@ -126,6 +130,24 @@ diffSelection.forEach((sel) => {
 
 console.log(difficulty)
 
+
+const mute = () => {
+    // let isMute = false
+    if(isMute === true){
+        gameAudio.pause()
+        volumeBtn.classList.remove("fa-volume-high")
+        volumeBtn.classList.add("fa-volume-off")
+        isMute = false
+    } else {
+        gameAudio.play()
+        volumeBtn.classList.add("fa-volume-high")
+        volumeBtn.classList.remove("fa-volume-off")
+        isMute = true
+    }
+
+}
+
+volumeBtn.addEventListener("click", mute)
 
 function countDown() {
     // timeInterval = setInterval(countDown, 1000)
@@ -220,8 +242,3 @@ restartBtn.addEventListener("click", () => {
 })
 
 newGameBtn.addEventListener("click", newGame)
-
-document.addEventListener("DOMContentLoaded", ()=> {
-    
-    gameAudio.play()
-})

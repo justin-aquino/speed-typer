@@ -18,7 +18,8 @@
 }
 
 body {
-    background: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fracing-horizontal-backdrop-vector-illustration-eps-65851961.jpg&f=1&nofb=1);
+    background: url(https://st.depositphotos.com/1032749/5102/i/950/depositphotos_51025589-stock-photo-racing-flags-background-checkered-flag.jpg);
+    background-size: contain;
     display: flex;
     flex-wrap: wrap;
     align-items: center;

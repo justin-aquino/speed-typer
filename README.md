@@ -56,6 +56,10 @@ MVP will only have Normal difficulty as default. Once the MVP goal has been reac
 ### SOURCES
 All images used are from google images.
 All audios used are from ZapSplat.com
+
+## DEPLOYED LINK:
+
+[KEYLOMETER/MINUTE] (https://justin-aquino.github.io/speed-typer/)
 <!-- ## PROJECT TIMELINE
 #### This is only a guide. For accountability. 
 2/4/22 - Barebones Finished. HTML, CSS, Bootstrap

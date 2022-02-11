@@ -255,5 +255,8 @@ ol, li {
         font-size: 20px;
         padding: 1%;
     }
+    .instructionsListMain{
+        font-size: 20px;
+    }
     
   }

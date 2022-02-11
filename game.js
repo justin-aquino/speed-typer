@@ -9,7 +9,7 @@ const restartBtn = document.querySelector("#restartBtn")
 let difficulty = "NORMAL"
 // let difficulty = localStorage.getItem("difficulty") !== null ? localStorage.getItem("difficulty") : "Normal";
 // difficulty.style.color = "red"
-difficultyDisplay.innerText = `Difficulty Level: ${difficulty}`
+difficultyDisplay.innerText = `Difficulty: ${difficulty}`
 let gameOverScore = document.querySelector("#gameOverScore")
 let playerInput = document.querySelector("#playerInput")
 let timerDisplay = document.querySelector("#timer")
@@ -76,29 +76,23 @@ const words = [
     "Master has given Dobby a sock. Dobby is free!",
     "I am Prometheus! And you are just a god!",
     "silhouette",
-    // "Hepaticocholangiogastrostomy",
+    "Hepaticocholangiogastrostomy",
     "Condescend",
     "vengeance",
     "saccharine",
-    // "floccinaucinihilipilification",
-    // "expunge",
-    // "abysmal",
-    // "bouillon",
-    // "andragogy",
-    // "onomatopoeia",
+    "floccinaucinihilipilification",
+    "expunge",
+    "abysmal",
+    "bouillon",
+    "andragogy",
+    "onomatopoeia",
     "soliloquy",
     "pneumonia",
     "liaison",
     "laissez faire",
     "ganache",
-    // "for(x = 0; x < array.length; x++)",
+    "for(x = 0; x < array.length; x++)",
     "Everai",
-    "Everai",
-    "Everai",
-    "Everai",
-    "Everai",
-    "Andelu",
-    "Andelu",
     "Andelu",
     "White List",
     "Pink Discord Server Name",
@@ -220,7 +214,7 @@ const newGame = () => {
     // window.location.reload()
     container.style.display = "block"
     // countDown()
-    gameAudio.play()
+    // gameAudio.play()
     randomWordsDisplay.innerText = ""
     score = 0
     timer = 10
